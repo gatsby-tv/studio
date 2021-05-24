@@ -1,0 +1,9 @@
+{
+  "name": "@gatsby-tv/studio",
+  "version": "0.1.0",
+  "description": "Application for hosting videos on Gatsby.",
+  "main": "main.prod.js",
+  "license": "AGPL-3.0",
+  "private": true,
+  "dependencies": {}
+}
