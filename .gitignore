@@ -41,6 +41,7 @@ app/style.css.map
 dist
 main.js
 main.js.map
+dapper/*
 
 .idea
 npm-debug.log.*

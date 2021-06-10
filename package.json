@@ -15,6 +15,7 @@
     "start:renderer": "node scripts/start.renderer.js",
     "postinstall": "node scripts/postinstall.js",
     "package": "node scripts/package.js",
+    "package:windows": "node scripts/package.windows.js",
     "format": "node scripts/format.js"
   },
   "build": {
@@ -27,6 +28,9 @@
       "main.prod.js",
       "main.prod.js.map",
       "package.json"
+    ],
+    "extraFiles": [
+      "dapper/"
     ],
     "mac": {
       "target": [
@@ -54,6 +58,11 @@
       "target": [
         "nsis"
       ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "target": [
