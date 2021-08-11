@@ -9,7 +9,7 @@ module.exports = {
   silent: (command) => execSync(command, { cwd: root }),
   parallel: (...commands) =>
     execSync(
-      `yarn run concurrently ${commands
+      `yarn run concurrently -p none ${commands
         .map((command) => `'${command}'`)
         .join(' ')}`,
       { stdio: 'inherit', cwd: root }

@@ -1,8 +1,0 @@
-@use 'styles' as *;
-
-.Home {
-  @include expand(fixed);
-  @include center;
-  @include font-size(display-medium);
-  @include font-weight(bold);
-}

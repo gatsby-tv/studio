@@ -9,11 +9,13 @@ const devtools =
 module.exports = merge(config, {
   ...devtools,
   mode: 'production',
-  target: 'electron-main',
-  entry: './app/main.dev.ts',
+  target: 'node',
+  entry: './app/server.dev.ts',
 
   output: {
-    filename: 'main.prod.js',
+    filename: 'server.prod.js',
+    path: path.resolve(__dirname, '../app/dist'),
+    publicPath: './dist/',
   },
 
   plugins: [

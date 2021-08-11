@@ -1,3 +1,6 @@
-const { run } = require('./index');
+const { parallel } = require('./index');
 
-run('yarn run cross-env NODE_ENV=development electron -r ./scripts/register.js app/main.dev.ts');
+parallel(
+  'yarn run cross-env NODE_ENV=development electron -r ./scripts/register.js app/main.dev.ts',
+  'yarn run cross-env NODE_ENV=development webpack serve --config configs/webpack.config.server.dev.js'
+);

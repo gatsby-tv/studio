@@ -1,4 +1,6 @@
-const { run } = require('./index');
+const { run, parallel } = require('./index');
 
-run('yarn run cross-env NODE_ENV=development webpack --config configs/webpack.config.renderer.dev.js');
-run('yarn run yarn-deduplicate yarn.lock');
+parallel(
+  'yarn run cross-env NODE_ENV=development webpack --config configs/webpack.config.renderer.dev.js',
+  'yarn run cross-env NODE_ENV=development webpack --config configs/webpack.config.server.dev.js'
+);

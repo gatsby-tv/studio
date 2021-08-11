@@ -31,19 +31,29 @@ node_modules
 .DS_Store
 
 # App packaged
-release
-app/main.prod.js
-app/main.prod.js.map
-app/renderer.prod.js
-app/renderer.prod.js.map
-app/style.css
-app/style.css.map
 dist
-main.js
-main.js.map
+release
+app/.yarn
+app/main.prod.js*
+app/renderer.prod.js*
+app/server.prod.js*
+app/style.css*
+main.js*
+server.js*
 
 .idea
 npm-debug.log.*
 *.css.d.ts
 *.sass.d.ts
 *.scss.d.ts
+
+# Yarn
+yarn-error.log
+.yarn-integrity
+.pnp/
+.pnp.cjs
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

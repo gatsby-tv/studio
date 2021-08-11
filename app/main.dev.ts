@@ -1,37 +1,53 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
+import cluster from 'cluster';
+import chalk from 'chalk';
 import { app, BrowserWindow, shell } from 'electron';
+import { fork, ChildProcess } from 'child_process';
 
-let main: BrowserWindow | null = null;
+type Main = {
+  window: BrowserWindow | undefined;
+  server: ChildProcess | undefined;
+};
+
+const main: Main = {
+  window: undefined,
+  server: undefined,
+};
+
+const logger = {
+  info: (...messages: string[]) => console.log(chalk.bold(...messages)),
+  error: (...messages: (string | Error)[]) =>
+    console.error(chalk.red(...messages)),
+};
 
 if (process.env.NODE_ENV === 'production') {
-  const SourceMapSupport = require('source-map-support');
-  SourceMapSupport.install();
+  require('source-map-support').install();
 }
 
-async function installExtensions() {
-  const installer = require('electron-devtools-installer');
-  const force = !!process.env.UPGRADE_EXTENSIONS;
-  const extensions = ['REACT_DEVELOPER_TOOLS'];
+async function startWindow() {
+  logger.info('Starting Window...');
 
-  return installer
-    .default(
-      extensions.map((name) => installer[name]),
-      force
-    )
-    .catch(console.log);
-}
-
-async function createWindow() {
   if (
     process.env.NODE_ENV === 'development' ||
     process.env.DEBUG_PROD === 'true'
   ) {
-    await installExtensions();
+    logger.info('Installing Electron Devtools...');
+
+    const installer = require('electron-devtools-installer');
+    const force = Boolean(process.env.UPGRADE_EXTENSIONS);
+    const extensions = ['REACT_DEVELOPER_TOOLS'];
+
+    await installer
+      .default(
+        extensions.map((name) => installer[name]),
+        force
+      )
+      .catch(logger.error);
   }
 
-  main = new BrowserWindow({
+  main.window = new BrowserWindow({
     show: false,
     width: 1024,
     height: 728,
@@ -41,35 +57,46 @@ async function createWindow() {
     },
   });
 
-  main.loadURL(`file://${__dirname}/index.html`);
+  main.window.loadURL(`file://${__dirname}/index.html`);
+  main.window.setMenuBarVisibility(false);
 
-  main.webContents.on('did-finish-load', () => {
-    if (!main) {
+  main.window.webContents.on('did-finish-load', () => {
+    if (!main.window) {
       throw new Error('main is not defined');
     }
 
-    main.show();
-    main.focus();
+    main.window.show();
+    main.window.focus();
 
-    main.on('closed', () => {
-      main = null;
-    });
+    main.window.on('closed', () => void (main.window = undefined));
 
-    main.webContents.on('new-window', (event, url) => {
+    main.window.webContents.on('new-window', (event, url) => {
       event.preventDefault();
       shell.openExternal(url);
     });
   });
 }
 
+async function startServer() {
+  logger.info('Starting Server...');
+
+  const server =
+    process.env.NODE_ENV === 'development'
+      ? path.resolve(__dirname, '../dist/server.dev.js')
+      : path.resolve(__dirname, './dist/server.prod.js');
+
+  main.server = fork(server, { stdio: 'inherit' });
+}
+
+app.whenReady().then(startWindow).then(startServer).catch(logger.error);
+
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  if (main.server) main.server = void main.server.kill();
+  if (process.platform === 'darwin') return;
+  app.quit();
 });
 
-app.whenReady().then(createWindow).catch(console.log);
-
 app.on('activate', () => {
-  if (main === null) createWindow();
+  if (main.window === undefined) startWindow();
+  if (main.server === undefined) startServer();
 });

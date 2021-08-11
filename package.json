@@ -9,13 +9,16 @@
   "scripts": {
     "build": "node scripts/build.js",
     "build:main": "node scripts/build.main.js",
+    "build:server": "node scripts/build.server.js",
     "build:renderer": "node scripts/build.renderer.js",
     "start": "node scripts/start.js",
     "start:main": "node scripts/start.main.js",
+    "start:server": "node scripts/start.server.js",
     "start:renderer": "node scripts/start.renderer.js",
     "postinstall": "node scripts/postinstall.js",
-    "package": "node scripts/package.js",
-    "format": "node scripts/format.js"
+    "prepack": "node scripts/prepack.js",
+    "format": "node scripts/format.js",
+    "types": "tsc --noEmit"
   },
   "build": {
     "productName": "GatsbyStudio",
@@ -67,6 +70,7 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.3",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-private-methods": "^7.13.0",
@@ -81,7 +85,9 @@
     "@babel/preset-typescript": "^7.13.0",
     "@babel/register": "^7.13.16",
     "@babel/runtime": "^7.14.0",
-    "@gatsby-tv/types": "^0.4.24",
+    "@gatsby-tv/types": "^0.4.39",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node-ipc": "^9.1.5",
     "@types/react": "^17.0.6",
     "@types/react-dom": "^17.0.5",
     "@types/react-router-dom": "^5.1.7",
@@ -90,12 +96,10 @@
     "babel-plugin-dev-expression": "^0.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "chalk": "^4.1.1",
     "concurrently": "^6.1.0",
-    "core-js": "^3.12.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
-    "electron": "^12.0.9",
+    "electron": "^13.1.9",
     "electron-builder": "^22.10.5",
     "electron-devtools-installer": "^3.2.0",
     "electron-rebuild": "^2.3.5",
@@ -104,29 +108,42 @@
     "postcss-loader": "^5.3.0",
     "prettier": "^2.3.0",
     "sass": "^1.34.0",
-    "sass-loader": "^11.1.1",
+    "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
-    "swr": "^0.5.6",
     "typescript": "^4.2.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3",
-    "yarn-deduplicate": "^3.1.0"
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@gatsby-tv/components": "^0.5.0",
-    "@gatsby-tv/content": "^0.5.0",
-    "@gatsby-tv/icons": "^0.5.0",
-    "@gatsby-tv/preview": "^0.5.0",
-    "@gatsby-tv/utilities": "^0.5.0",
+    "@gatsby-tv/components": "^0.5.1",
+    "@gatsby-tv/content": "^0.5.1",
+    "@gatsby-tv/icons": "^0.5.1",
+    "@gatsby-tv/preview": "^0.5.1",
+    "@gatsby-tv/utilities": "^0.5.1",
+    "bufferutil": "^4.0.3",
+    "chalk": "^4.1.1",
+    "cids": "^1.1.7",
+    "core-js": "^3.16.1",
     "electron-debug": "^3.2.0",
+    "it-drain": "^1.0.4",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
-    "source-map-support": "^0.5.19"
-  }
+    "rxjs": "^7.3.0",
+    "source-map-support": "^0.5.19",
+    "supports-color": "^9.0.2",
+    "swr": "^0.5.6",
+    "uint8arrays": "^2.1.10",
+    "utf-8-validate": "^5.0.5"
+  },
+  "resolutions": {
+    "ipfs-utils": "ssh://git@github.com/gatsby-tv/js-ipfs-utils#fix/defer-to-native-fetch"
+  },
+  "packageManager": "yarn@3.0.1"
 }

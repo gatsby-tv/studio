@@ -84,6 +84,12 @@ module.exports = merge(config, {
     }),
   ],
 
+  resolve: {
+    alias: {
+      react: path.resolve(__dirname, '../node_modules/react'),
+    },
+  },
+
   devServer: {
     port,
     publicPath: `http://localhost:${port}/dist`,
@@ -94,7 +100,6 @@ module.exports = merge(config, {
     lazy: false,
     hot: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
-    contentBase: path.resolve(__dirname, 'dist'),
     watchOptions: {
       aggregateTimeout: 300,
       ignored: /node_modules/,
