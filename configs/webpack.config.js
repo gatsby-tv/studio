@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const { dependencies } = require('../app/package.json');
 
@@ -32,8 +32,8 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'production',
+    new Dotenv({
+      defaults: true,
     }),
   ],
 };

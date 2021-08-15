@@ -1,7 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
-const config = require('./webpack.config');
+const { EnvironmentPlugin } = require('webpack');
 const { merge } = require('webpack-merge');
+
+const config = require('./webpack.config');
 
 const devtools =
   process.env.DEBUG_PROD === 'true' ? { devtool: 'source-map' } : {};
@@ -17,7 +18,7 @@ module.exports = merge(config, {
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin({
+    new EnvironmentPlugin({
       NODE_ENV: 'production',
       DEBUG_PROD: false,
     }),

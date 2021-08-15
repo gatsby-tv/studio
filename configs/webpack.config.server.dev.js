@@ -1,7 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
-const config = require('./webpack.config');
+const { EnvironmentPlugin } = require('webpack');
 const { merge } = require('webpack-merge');
+
+const config = require('./webpack.config');
 
 const port = process.env.SERVER_PORT || 1214;
 
@@ -17,7 +18,7 @@ module.exports = merge(config, {
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin({
+    new EnvironmentPlugin({
       NODE_ENV: 'development',
     }),
   ],

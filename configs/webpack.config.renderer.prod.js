@@ -1,8 +1,9 @@
 const path = require('path');
-const webpack = require('webpack');
-const config = require('./webpack.config');
+const { EnvironmentPlugin } = require('webpack');
 const { merge } = require('webpack-merge');
 const { spawn } = require('child_process');
+
+const config = require('./webpack.config');
 
 const port = process.env.PORT || 1212;
 const devtools = process.env.DEBUG_PROD === 'true' ? {
@@ -80,7 +81,7 @@ module.exports = merge(config, {
   },
 
   plugins: [
-    new webpack.EnvironmentPlugin({
+    new EnvironmentPlugin({
       NODE_ENV: 'production',
       DEBUG_PROD: false,
     }),
