@@ -6,26 +6,33 @@ import '@gatsby-tv/components/dist/fonts.css';
 import '@gatsby-tv/preview/dist/styles.css';
 import '@gatsby-tv/content/dist/styles.css';
 
-import { MessengerContext, useMessengerContext } from '@app/utilities/messenger';
+import {
+  MessengerContext,
+  useMessengerContext,
+} from '@app/utilities/messenger';
+import { SessionContext, useSessionContext } from '@app/services/session';
 
-import { Loading } from '@app/routes/Loading';
-import { SignIn } from '@app/routes/SignIn';
-import { Studio } from '@app/routes/Studio';
+import Index from '@app/routes/index';
+import SignIn from '@app/routes/signin';
+import Studio from '@app/routes/studio';
 
 export default function App(): ReactElement {
   const messenger = useMessengerContext();
+  const session = useSessionContext();
 
   return (
     <AppProvider>
-      <MessengerContext.Provider value={messenger}>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Loading} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/studio" component={Studio} />
-          </Switch>
-        </Router>
-      </MessengerContext.Provider>
+      <SessionContext.Provider value={session}>
+        <MessengerContext.Provider value={messenger}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Index} />
+              <Route path="/signin" component={SignIn} />
+              <Route path="/studio" component={Studio} />
+            </Switch>
+          </Router>
+        </MessengerContext.Provider>
+      </SessionContext.Provider>
     </AppProvider>
   );
 }
