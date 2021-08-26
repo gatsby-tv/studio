@@ -1,4 +1,4 @@
-import { Layout, LayoutProps } from './components/Layout';
+import { Layout, LayoutProps } from './Layout';
 
 export type { LayoutProps as StudioLayoutProps };
 
