@@ -13,7 +13,7 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-    modules: [path.resolve(__dirname, '../app'), 'node_modules'],
+    modules: ['node_modules'],
   },
 
   module: {
@@ -29,6 +29,10 @@ module.exports = {
         },
       },
     ],
+  },
+
+  experiments: {
+    topLevelAwait: true,
   },
 
   plugins: [

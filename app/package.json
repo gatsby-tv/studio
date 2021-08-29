@@ -4,5 +4,8 @@
   "description": "Application for hosting videos on Gatsby.",
   "main": "main.prod.js",
   "license": "AGPL-3.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ipfs": "^0.58.2"
+  }
 }

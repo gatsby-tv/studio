@@ -1997,6 +1997,7 @@ __metadata:
     electron-devtools-installer: ^3.2.0
     electron-rebuild: ^2.3.5
     file-loader: ^6.2.0
+    ipfs: ^0.54.4
     it-drain: ^1.0.4
     jsonwebtoken: ^8.5.1
     node-fetch: ^2.6.1
@@ -5944,7 +5945,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cids@npm:^1.0.0, cids@npm:^1.1.5, cids@npm:^1.1.7":
+"cids@npm:^1.0.0, cids@npm:^1.1.5":
+  version: 1.1.8
+  resolution: "cids@npm:1.1.8"
+  dependencies:
+    multibase: ^4.0.1
+    multicodec: ^3.0.1
+    multihashes: ^4.0.1
+    uint8arrays: ^3.0.0
+  checksum: 1183dbf4499bf7faf9e713294c978e1e2f5b2f477f4fb4aad334ce7c7dce3ec5b9126a29cae237bcc35df491fa20ac3d36b4c2d922677257841679edb457dafe
+  languageName: node
+  linkType: hard
+
+"cids@npm:^1.1.7":
   version: 1.1.7
   resolution: "cids@npm:1.1.7"
   dependencies:
@@ -7645,9 +7658,9 @@ __metadata:
   linkType: hard
 
 "denque@npm:^1.4.1":
-  version: 1.5.0
-  resolution: "denque@npm:1.5.0"
-  checksum: 9c0d07a3a6789bccc24f7023a54c83b8850b36c8fbc3aff4bf43b01b76a93ae11c88139502913534fe913bac1b0418dbc30e487ce3d176cbbc001a7a18627c56
+  version: 1.5.1
+  resolution: "denque@npm:1.5.1"
+  checksum: 4375ad19d5cea99f90effa82a8cecdaa10f4eb261fbcd7e47cd753ff2737f037aac8f7f4e031cc77f3966314c491c86a0d3b20c128aeee57f791b4662c45108e
   languageName: node
   linkType: hard
 
@@ -12325,7 +12338,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ipfs@npm:^0.54.2":
+"ipfs@npm:^0.54.2, ipfs@npm:^0.54.4":
   version: 0.54.5
   resolution: "ipfs@npm:0.54.5"
   dependencies:
@@ -14883,8 +14896,8 @@ fsevents@~2.3.2:
   linkType: hard
 
 "libp2p@npm:^0.30.7":
-  version: 0.30.12
-  resolution: "libp2p@npm:0.30.12"
+  version: 0.30.13
+  resolution: "libp2p@npm:0.30.13"
   dependencies:
     "@motrix/nat-api": ^0.3.1
     abort-controller: ^3.0.0
@@ -14936,9 +14949,10 @@ fsevents@~2.3.2:
     set-delayed-interval: ^1.0.0
     streaming-iterables: ^5.0.2
     timeout-abort-controller: ^1.1.1
+    uint8arrays: ^2.1.3
     varint: ^6.0.0
     xsalsa20: ^1.0.2
-  checksum: f34c2eb7911194e6b756be11751951f93d578ca01f1b68fb12dfd99c2ccaf35a97e305936992fec748d5beb6f743ef9829e26e2baff5163dc47b046411945029
+  checksum: 379a664339f0f97c8128c8e2820ddacc2fb6094c96420881112329acfa4ca3fb92844f50a56db236b14778294dc78c1560e91abb868b362669947f3358207b8d
   languageName: node
   linkType: hard
 
@@ -16489,12 +16503,21 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"multibase@npm:^4.0.1, multibase@npm:^4.0.2":
+"multibase@npm:^4.0.1":
   version: 4.0.5
   resolution: "multibase@npm:4.0.5"
   dependencies:
     "@multiformats/base-x": ^4.0.1
   checksum: d310f1854bdb864ba49b0b141062bb18bcc541cf6a11ead4cdf896f28d3a8232a162777418bf3c02b9c3d819b233bef65778ccb99036fcaed444ae8da37fff5c
+  languageName: node
+  linkType: hard
+
+"multibase@npm:^4.0.2":
+  version: 4.0.6
+  resolution: "multibase@npm:4.0.6"
+  dependencies:
+    "@multiformats/base-x": ^4.0.1
+  checksum: 891ce47f509c6070d2306e7e00aef3ef41fbb50a848a1e1bec5e75ca63c5032015a436cf09e9e3939b5b2ca81e74804151eb410a388f10e9aabf7a2f5a35d272
   languageName: node
   linkType: hard
 
@@ -16567,7 +16590,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"multihashes@npm:^4.0.1, multihashes@npm:^4.0.2":
+"multihashes@npm:^4.0.1":
   version: 4.0.2
   resolution: "multihashes@npm:4.0.2"
   dependencies:
@@ -16578,17 +16601,28 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"multihashes@npm:^4.0.2":
+  version: 4.0.3
+  resolution: "multihashes@npm:4.0.3"
+  dependencies:
+    multibase: ^4.0.1
+    uint8arrays: ^3.0.0
+    varint: ^5.0.2
+  checksum: 57c978aa53f7144f8a146a486aa6aea96a73f21058f48ab80a8c5542854197aa63d33aae42b005bed1bbba9f70958b60f3287d90f1a47cf13e8ea7d75d6b8e34
+  languageName: node
+  linkType: hard
+
 "multihashing-async@npm:^2.0.0, multihashing-async@npm:^2.0.1, multihashing-async@npm:^2.1.2":
-  version: 2.1.3
-  resolution: "multihashing-async@npm:2.1.3"
+  version: 2.1.4
+  resolution: "multihashing-async@npm:2.1.4"
   dependencies:
     blakejs: ^1.1.0
     err-code: ^3.0.0
     js-sha3: ^0.8.0
     multihashes: ^4.0.1
     murmurhash3js-revisited: ^3.0.0
-    uint8arrays: ^2.1.3
-  checksum: 3b389f989a9b8fb0eb9e3494fccdba500afe5054503ad57399f1b8ea0abf775b4a70a0ab13537ade2d34c15f5aef9f9d9d04b4b54dfadbef64a119b1c2c1b991
+    uint8arrays: ^3.0.0
+  checksum: 3d2af81fa82557afc766e62d28e797a8788504d0e90fe15d9da91c40e6d4c5d5a0a100c4f28fef31f4adea020df38eecb0dcc9bfeddf506a25edf43fef7f37f4
   languageName: node
   linkType: hard
 
@@ -18916,14 +18950,14 @@ fsevents@~2.3.2:
   linkType: hard
 
 "protons@npm:^2.0.0":
-  version: 2.0.2
-  resolution: "protons@npm:2.0.2"
+  version: 2.0.3
+  resolution: "protons@npm:2.0.3"
   dependencies:
     protocol-buffers-schema: ^3.3.1
     signed-varint: ^2.0.1
-    uint8arrays: ^2.1.3
+    uint8arrays: ^3.0.0
     varint: ^5.0.0
-  checksum: 56fbe1eec9fd8842f1bc241e3f7060cd550eec7f6570e207af5d5163ce7c385d5dd86be727eca8eb98c28ff89c8d7067431cdabb92e410c8e8c8bfc2a419c0ae
+  checksum: 4339f3b55c539d052917b006e6a4ee6d7547ab94c17fc375ee1e1fdd7dfd88f638053cdcf17ab303c39834eecf73db5ce33086f7197c53eb5a32b42a28c6b394
   languageName: node
   linkType: hard
 
@@ -22813,6 +22847,15 @@ typescript@^4.2.4:
   dependencies:
     multiformats: ^9.4.2
   checksum: 63ceb5fecc09de69641531c847e0b435d15a73587e40d4db23ed9b8a1ebbe839ae39fe81a15ea6079cdf642fcf2583983f9a5d32726edc4bc5e87634f34e3bd5
+  languageName: node
+  linkType: hard
+
+"uint8arrays@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "uint8arrays@npm:3.0.0"
+  dependencies:
+    multiformats: ^9.4.2
+  checksum: 58470e687140e64a7fa08ab66b64777b75f105bf78180324448dc798436beacf0bd322cd2b58d20ca4cfa2e091f58e4b52d008e95f21d0ade16c1102b5d23ad3
   languageName: node
   linkType: hard
 
