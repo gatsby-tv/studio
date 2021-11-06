@@ -2,11 +2,9 @@ import { Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import net, { Socket } from 'net';
 
-import { Message } from '@app/types';
-
 const port = Number(process.env.SERVER_PORT) || 1216;
 
-export class Messenger {
+export abstract class Messenger {
   private readonly unsubscribe = new Subject<void>();
   private readonly subjects: Record<string, Subject<any>> = {};
 
@@ -20,13 +18,13 @@ export class Messenger {
     this.subject(message.queue).next(message.body);
   }
 
+  public abstract publish(queue: string, body: any): void;
+
   public subscribe(queue: string, callback: (data: any) => void): Subscription {
     return this.subject(queue)
       .pipe(takeUntil(this.unsubscribe))
       .subscribe(callback);
   }
-
-  public publish(queue: string, body: any) {}
 
   public stop() {
     this.unsubscribe.next();

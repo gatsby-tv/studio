@@ -1,14 +1,14 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
-import cluster from 'cluster';
 import chalk from 'chalk';
-import { app, BrowserWindow, shell } from 'electron';
+import { app, shell, BrowserWindow } from 'electron';
 import { fork, ChildProcess } from 'child_process';
 
 type Main = {
   window: BrowserWindow | undefined;
   server: ChildProcess | undefined;
+  proxy: Express | undefined;
 };
 
 const main: Main = {
@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'production') {
   require('source-map-support').install();
 }
 
-async function startWindow() {
+async function Window() {
   logger.info('Starting Window...');
 
   if (
@@ -77,7 +77,7 @@ async function startWindow() {
   });
 }
 
-async function startServer() {
+async function Server() {
   logger.info('Starting Server...');
 
   const server =
@@ -88,15 +88,17 @@ async function startServer() {
   main.server = fork(server, { stdio: 'inherit' });
 }
 
-app.whenReady().then(startWindow).then(startServer).catch(logger.error);
+async function start() {
+  if (!app.requestSingleInstanceLock()) return void quit();
+  if (main.window === undefined) Window();
+  if (main.server === undefined) Server();
+}
 
-app.on('window-all-closed', () => {
+async function quit() {
   if (main.server) main.server = void main.server.kill();
-  if (process.platform === 'darwin') return;
-  app.quit();
-});
+  if (process.platform !== 'darwin') return void app.quit();
+}
 
-app.on('activate', () => {
-  if (main.window === undefined) startWindow();
-  if (main.server === undefined) startServer();
-});
+app.on('ready', start);
+app.on('activate', start);
+app.on('window-all-closed', quit);

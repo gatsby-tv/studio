@@ -6,6 +6,6 @@
   "license": "AGPL-3.0",
   "private": true,
   "dependencies": {
-    "ipfs": "^0.58.2"
+    "ipfs": "^0.54.4"
   }
 }

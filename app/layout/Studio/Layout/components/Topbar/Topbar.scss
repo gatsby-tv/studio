@@ -1,0 +1,11 @@
+@use 'styles' as *;
+
+.Topbar {
+  @include elevation(2);
+  @include font-size(display-small);
+  display: flex;
+  align-items: center;
+  padding: 0 spacing(2);
+  height: spacing(5);
+  background-color: palette(surface, 2);
+}
