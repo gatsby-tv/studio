@@ -1,11 +1,12 @@
-@use 'styles' as *;
+@use 'gatsby' as *;
+@use 'gatsby/text';
 
 .Topbar {
   @include elevation(2);
-  @include font-size(display-small);
   display: flex;
   align-items: center;
   padding: 0 spacing(2);
   height: spacing(5);
+  font-size: text.$display-small;
   background-color: palette(surface, 2);
 }

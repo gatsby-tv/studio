@@ -1,10 +1,10 @@
-import { useEffect, ReactElement } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Page } from '@app/layout/Page';
 import { useSession } from '@app/services/session';
 
-export default function IndexRoute(): ReactElement {
+export default function IndexRoute(): JSX.Element {
   const { session } = useSession();
   const navigate = useNavigate();
 
@@ -13,9 +13,5 @@ export default function IndexRoute(): ReactElement {
     navigate(session.valid ? '/studio' : '/signin');
   }, [session.loading, session.valid]);
 
-  return (
-    <>
-      <Page.Loading />
-    </>
-  );
+  return <Page.Loading />;
 }

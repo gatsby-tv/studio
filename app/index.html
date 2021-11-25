@@ -9,12 +9,12 @@
     <script>
       const port = process.env.PORT || 1212;
       const markup = (src) => `<script defer src="${src}"><\/script>`;
+      const scripts = ['renderer'];
+
       const source =
         process.env.NODE_ENV === 'development'
           ? (name) => `http://localhost:${port}/dist/${name}.dev.js`
           : (name) => `./dist/${name}.prod.js`;
-
-      const scripts = ['renderer'];
 
       document.write(scripts.map(source).map(markup).join('\n'));
     </script>

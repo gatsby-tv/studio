@@ -6,9 +6,12 @@ const { spawn } = require('child_process');
 const config = require('./webpack.config');
 
 const port = process.env.PORT || 1212;
-const devtools = process.env.DEBUG_PROD === 'true' ? {
-  devtool: 'source-map'
-} : {};
+const devtools =
+  process.env.DEBUG_PROD === 'true'
+    ? {
+        devtool: 'source-map',
+      }
+    : {};
 
 module.exports = merge(config, {
   ...devtools,
@@ -43,7 +46,10 @@ module.exports = merge(config, {
             loader: 'sass-loader',
             options: {
               sassOptions: {
-                includePaths: [path.resolve(__dirname, '../app')],
+                includePaths: [
+                  path.resolve(__dirname, '../app'),
+                  require('@gatsby-tv/styles'),
+                ],
               },
             },
           },

@@ -42,7 +42,10 @@ module.exports = merge(config, {
             loader: 'sass-loader',
             options: {
               sassOptions: {
-                includePaths: [path.resolve(__dirname, '../app')],
+                includePaths: [
+                  path.resolve(__dirname, '../app'),
+                  require('@gatsby-tv/styles'),
+                ],
               },
             },
           },

@@ -1,0 +1,22 @@
+@use 'gatsby' as *;
+@use 'gatsby/duration';
+
+.Menu {
+  @include expand;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.Stage {
+  @include expand;
+  position: absolute;
+  will-change: left;
+}
+
+.Scroll {
+  height: 100%;
+}
+
+.Active {
+  transition: left duration.$base ease;
+}

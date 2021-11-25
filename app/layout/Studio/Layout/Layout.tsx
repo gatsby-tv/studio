@@ -1,4 +1,4 @@
-import { ReactNode, ReactElement } from 'react';
+import { ReactNode } from 'react';
 import { Frame } from '@gatsby-tv/components';
 
 import { Topbar } from './components/Topbar';
@@ -10,7 +10,7 @@ export interface LayoutProps {
   children?: ReactNode;
 }
 
-export function Layout(props: LayoutProps): ReactElement {
+export function Layout(props: LayoutProps): JSX.Element {
   const { children } = props;
 
   return (

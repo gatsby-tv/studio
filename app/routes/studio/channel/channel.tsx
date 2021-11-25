@@ -1,5 +1,3 @@
-import { ReactElement } from 'react';
-
-export default function ChannelRoute(): ReactElement {
+export default function ChannelRoute(): JSX.Element {
   return <p>/studio/:channel</p>;
 }

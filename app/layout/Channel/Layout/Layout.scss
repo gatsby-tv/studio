@@ -1,0 +1,18 @@
+@use 'gatsby' as *;
+
+.Layout {
+  @include expand;
+  display: flex;
+}
+
+.Menu {
+  flex: 0 0 rem(250px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: palette(surface, 4);
+}
+
+.Content {
+  flex: 1 1 100%;
+}

@@ -1896,6 +1896,7 @@ __metadata:
     core-js: ^3.7.0
     react-popper: ^2.2.4
   peerDependencies:
+    "@gatsby-tv/styles": "*"
     "@gatsby-tv/utilities": "*"
     react: ^17.0.1
     react-dom: ^17.0.1
@@ -1925,6 +1926,7 @@ __metadata:
     "@gatsby-tv/icons": "*"
     "@gatsby-tv/preview": "*"
     "@gatsby-tv/services": "*"
+    "@gatsby-tv/styles": "*"
     "@gatsby-tv/types": ^0.4.6
     "@gatsby-tv/utilities": "*"
     react: ^17.0.1
@@ -1940,11 +1942,27 @@ __metadata:
   peerDependencies:
     "@gatsby-tv/components": "*"
     "@gatsby-tv/icons": "*"
+    "@gatsby-tv/styles": "*"
     "@gatsby-tv/utilities": "*"
     react: ^17.0.1
     react-dom: ^17.0.1
     react-is: ^17.0.1
     react-router-dom: ^5.2.0
+  languageName: node
+  linkType: soft
+
+"@gatsby-tv/services@portal:/home/cjayross/gatsby/packages/services::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@gatsby-tv/services@portal:/home/cjayross/gatsby/packages/services::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+  dependencies:
+    core-js: ^3.7.0
+    dompurify: ^2.2.7
+  peerDependencies:
+    "@gatsby-tv/types": ^0.4.6
+    "@gatsby-tv/utilities": "*"
+    react: ^17.0.1
+    react-dom: ^17.0.1
+    swr: ^0.5.3
   languageName: node
   linkType: soft
 
@@ -1967,12 +1985,14 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@babel/register": ^7.13.16
     "@babel/runtime": ^7.14.0
-    "@gatsby-tv/components": ^0.6.0
-    "@gatsby-tv/icons": ^0.6.0
-    "@gatsby-tv/layout": ^0.6.0
-    "@gatsby-tv/preview": ^0.6.0
+    "@gatsby-tv/components": ^0.7.0
+    "@gatsby-tv/icons": ^0.7.0
+    "@gatsby-tv/layout": ^0.7.0
+    "@gatsby-tv/preview": ^0.7.0
+    "@gatsby-tv/services": ^0.7.0
+    "@gatsby-tv/styles": ^0.7.0
     "@gatsby-tv/types": ^0.5.5
-    "@gatsby-tv/utilities": ^0.6.0
+    "@gatsby-tv/utilities": ^0.7.0
     "@types/express": ^4.17.13
     "@types/jsonwebtoken": ^8.5.4
     "@types/node-ipc": ^9.1.5
@@ -2030,6 +2050,14 @@ __metadata:
     webpack-dev-server: ^3.11.2
     webpack-merge: ^5.7.3
   languageName: unknown
+  linkType: soft
+
+"@gatsby-tv/styles@portal:/home/cjayross/gatsby/packages/styles::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@gatsby-tv/styles@portal:/home/cjayross/gatsby/packages/styles::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+  peerDependencies:
+    sass: ^1.38.0
+  languageName: node
   linkType: soft
 
 "@gatsby-tv/types@npm:^0.5.5":

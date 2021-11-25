@@ -1,4 +1,4 @@
-import { ReactNode, ReactElement } from 'react';
+import { ReactNode } from 'react';
 import { useResolvedPath } from 'react-router-dom';
 import {
   useBreadcrumbsContext,
@@ -10,13 +10,13 @@ export interface BreadcrumbProps {
   label: string;
 }
 
-export function Breadcrumb(props: BreadcrumbProps): ReactElement {
+export function Breadcrumb(props: BreadcrumbProps): JSX.Element {
   const { children, label } = props;
-  const resolved = useResolvedPath('.');
+  const { pathname: path } = useResolvedPath('.');
 
   const context = useBreadcrumbsContext({
     label,
-    path: resolved.pathname,
+    path,
   });
 
   return (

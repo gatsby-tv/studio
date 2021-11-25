@@ -121,11 +121,13 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@gatsby-tv/components": "^0.6.0",
-    "@gatsby-tv/icons": "^0.6.0",
-    "@gatsby-tv/layout": "^0.6.0",
-    "@gatsby-tv/preview": "^0.6.0",
-    "@gatsby-tv/utilities": "^0.6.0",
+    "@gatsby-tv/components": "^0.7.0",
+    "@gatsby-tv/icons": "^0.7.0",
+    "@gatsby-tv/layout": "^0.7.0",
+    "@gatsby-tv/preview": "^0.7.0",
+    "@gatsby-tv/services": "^0.7.0",
+    "@gatsby-tv/styles": "^0.7.0",
+    "@gatsby-tv/utilities": "^0.7.0",
     "bufferutil": "^4.0.3",
     "chalk": "^4.1.1",
     "cids": "^1.1.7",
@@ -155,10 +157,10 @@
     "@gatsby-tv/components": "portal:/home/cjayross/gatsby/packages/components",
     "@gatsby-tv/layout": "portal:/home/cjayross/gatsby/packages/layout",
     "@gatsby-tv/icons": "portal:/home/cjayross/gatsby/packages/icons",
-    "@gatsby-tv/player": "portal:/home/cjayross/gatsby/packages/player",
     "@gatsby-tv/preview": "portal:/home/cjayross/gatsby/packages/preview",
-    "@gatsby-tv/utilities": "portal:/home/cjayross/gatsby/packages/utilities",
-    "@gatsby-tv/services": "portal:/home/cjayross/gatsby/packages/services"
+    "@gatsby-tv/services": "portal:/home/cjayross/gatsby/packages/services",
+    "@gatsby-tv/styles": "portal:/home/cjayross/gatsby/packages/styles",
+    "@gatsby-tv/utilities": "portal:/home/cjayross/gatsby/packages/utilities"
   },
   "packageManager": "yarn@3.0.1"
 }
