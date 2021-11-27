@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const { EnvironmentPlugin } = require('webpack');
 const { merge } = require('webpack-merge');
 const { spawn } = require('child_process');
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const config = require('./webpack.config');
 
@@ -22,6 +23,18 @@ module.exports = merge(config, {
 
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              plugins: [require.resolve('react-refresh/babel')],
+            },
+          },
+        ],
+      },
       {
         test: /\.(scss|sass)$/,
         use: [
@@ -86,6 +99,7 @@ module.exports = merge(config, {
     new EnvironmentPlugin({
       NODE_ENV: 'development',
     }),
+    new ReactRefreshPlugin(),
   ],
 
   resolve: {
@@ -103,6 +117,7 @@ module.exports = merge(config, {
     inline: true,
     lazy: false,
     hot: true,
+    liveReload: false,
     headers: { 'Access-Control-Allow-Origin': '*' },
     watchOptions: {
       aggregateTimeout: 300,
