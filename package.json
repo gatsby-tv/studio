@@ -99,6 +99,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "concurrently": "^6.1.0",
+    "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
     "dotenv-webpack": "^7.0.3",
@@ -162,5 +163,5 @@
     "@gatsby-tv/styles": "portal:/home/cjayross/gatsby/packages/styles",
     "@gatsby-tv/utilities": "portal:/home/cjayross/gatsby/packages/utilities"
   },
-  "packageManager": "yarn@3.0.1"
+  "packageManager": "yarn@3.1.1"
 }

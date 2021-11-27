@@ -1,4 +1,5 @@
 @use 'gatsby' as *;
+@use 'gatsby/shadow';
 
 .Layout {
   @include expand;
@@ -10,7 +11,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: palette(surface, 4);
+  background-color: palette(surface, 7);
+  box-shadow: shadow.$level-2;
 }
 
 .Content {
