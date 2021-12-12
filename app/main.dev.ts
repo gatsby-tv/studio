@@ -8,7 +8,6 @@ import { fork, ChildProcess } from 'child_process';
 type Main = {
   window: BrowserWindow | undefined;
   server: ChildProcess | undefined;
-  proxy: Express | undefined;
 };
 
 const main: Main = {

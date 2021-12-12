@@ -1610,7 +1610,7 @@ __metadata:
     "@gatsby-tv/preview": ^0.7.0
     "@gatsby-tv/services": ^0.7.0
     "@gatsby-tv/styles": ^0.7.0
-    "@gatsby-tv/types": ^0.5.5
+    "@gatsby-tv/types": ^0.5.6
     "@gatsby-tv/utilities": ^0.7.0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.2
     "@types/express": ^4.17.13
@@ -1682,12 +1682,12 @@ __metadata:
   languageName: node
   linkType: soft
 
-"@gatsby-tv/types@npm:^0.5.5":
-  version: 0.5.5
-  resolution: "@gatsby-tv/types@npm:0.5.5"
+"@gatsby-tv/types@npm:^0.5.6":
+  version: 0.5.6
+  resolution: "@gatsby-tv/types@npm:0.5.6"
   peerDependencies:
     core-js: ^3.7.0
-  checksum: f82eeef791a91b385d1b5faa61e9497adebcf508147a92a047f4111e9bac6b9d6c6807406cce3ff7f67b947659bc2474cb7480c892f79def4900529b28b1545c
+  checksum: 263898de155912b55710dc96ee4f206aceb67dcac8d916f732a56a7e27128a0c450e54e793c986727075d4cdfd6924ce2f13a392ff4fe620a2090193106054ce
   languageName: node
   linkType: hard
 

@@ -19,6 +19,5 @@
     }
   },
   "include": ["app"],
-  "files": ["app/index.d.ts"],
-  "exclude": ["node_modules"]
+  "files": ["app/index.d.ts"]
 }

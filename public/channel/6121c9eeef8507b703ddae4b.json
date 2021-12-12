@@ -1,0 +1,23 @@
+{
+  "subscribers": 0,
+  "avatar": {
+    "hash": "QmVykuqj5kVXgXTjhJiCqVUsjiZp7aHMsKownggJuB1dWS",
+    "mimeType": "image/jpeg"
+  },
+  "verified": false,
+  "description": "",
+  "trusted": false,
+  "banned": false,
+  "_id": "6121c9eeef8507b703ddae4b",
+  "handle": "BlenderOpenMovies",
+  "name": "Blender Open Movies",
+  "creationDate": "2021-08-22T03:52:14.066Z",
+  "banner": {
+    "hash": "QmcPw9xFWsGcaQcccH5ccMayqViwsToPhCEmvKRaaxziSp",
+    "mimeType": "image/jpeg"
+  },
+  "poster": {
+    "hash": "QmaGEFFmwH5woHp2CephGGE7th7JhXAPKim3vcWg5p3hwx",
+    "mimeType": "image/jpeg"
+  }
+}

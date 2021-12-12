@@ -85,7 +85,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@babel/register": "^7.13.16",
     "@babel/runtime": "^7.14.0",
-    "@gatsby-tv/types": "^0.5.5",
+    "@gatsby-tv/types": "^0.5.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.2",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.4",

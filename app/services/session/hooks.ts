@@ -4,8 +4,6 @@ import {
   useEffect,
   useReducer,
   useCallback,
-  Dispatch,
-  SetStateAction,
 } from 'react';
 import jwt from 'jsonwebtoken';
 import { ContextError } from '@gatsby-tv/utilities';
