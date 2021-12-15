@@ -124,13 +124,13 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@gatsby-tv/components": "^0.7.0",
-    "@gatsby-tv/icons": "^0.7.0",
-    "@gatsby-tv/layout": "^0.7.0",
-    "@gatsby-tv/preview": "^0.7.0",
-    "@gatsby-tv/services": "^0.7.0",
-    "@gatsby-tv/styles": "^0.7.0",
-    "@gatsby-tv/utilities": "^0.7.0",
+    "@gatsby-tv/components": "^0.7.1-0",
+    "@gatsby-tv/icons": "^0.7.1-0",
+    "@gatsby-tv/layout": "^0.7.1-0",
+    "@gatsby-tv/preview": "^0.7.1-0",
+    "@gatsby-tv/services": "^0.7.1-0",
+    "@gatsby-tv/styles": "^0.7.1-0",
+    "@gatsby-tv/utilities": "^0.7.1-0",
     "bufferutil": "^4.0.3",
     "chalk": "^4.1.1",
     "cids": "^1.1.7",
@@ -156,14 +156,7 @@
     "utf-8-validate": "^5.0.5"
   },
   "resolutions": {
-    "ipfs-utils": "ssh://git@github.com/gatsby-tv/js-ipfs-utils#fix/defer-to-native-fetch",
-    "@gatsby-tv/components": "portal:/home/cjayross/gatsby/packages/components",
-    "@gatsby-tv/layout": "portal:/home/cjayross/gatsby/packages/layout",
-    "@gatsby-tv/icons": "portal:/home/cjayross/gatsby/packages/icons",
-    "@gatsby-tv/preview": "portal:/home/cjayross/gatsby/packages/preview",
-    "@gatsby-tv/services": "portal:/home/cjayross/gatsby/packages/services",
-    "@gatsby-tv/styles": "portal:/home/cjayross/gatsby/packages/styles",
-    "@gatsby-tv/utilities": "portal:/home/cjayross/gatsby/packages/utilities"
+    "ipfs-utils": "ssh://git@github.com/gatsby-tv/js-ipfs-utils#fix/defer-to-native-fetch"
   },
   "packageManager": "yarn@3.1.1"
 }

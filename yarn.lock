@@ -1505,9 +1505,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/components@portal:/home/cjayross/gatsby/packages/components::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/components@portal:/home/cjayross/gatsby/packages/components::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/components@npm:0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/components@npm:0.7.1-1"
   dependencies:
     "@popperjs/core": ^2.5.4
     color: ^3.2.0
@@ -1521,22 +1521,24 @@ __metadata:
     react-dom: ^17.0.1
     react-is: ^17.0.1
     react-router-dom: ^5.2.0
+  checksum: c01c624fd8a23b48b8c4dee05a52a0f41b3a84c1c07ca2306c74afd9c66aeca7bf29d8437c1a9679285b198e89bdb60f7fc394a975015808c6f7f17161a357b7
   languageName: node
-  linkType: soft
+  linkType: hard
 
-"@gatsby-tv/icons@portal:/home/cjayross/gatsby/packages/icons::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/icons@portal:/home/cjayross/gatsby/packages/icons::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/icons@npm:0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/icons@npm:0.7.1-1"
   dependencies:
     core-js: ^3.8.3
   peerDependencies:
     react: ^17.0.1
+  checksum: 957c30e4c8ec8e866c0c8d5b87adfc06fbb06a7e5f38c8362187d628bb43a36b388dfd290c4e7ea9fe2a44ba4c3366099da95b57e1f61b6dc349bac44329e9d1
   languageName: node
-  linkType: soft
+  linkType: hard
 
-"@gatsby-tv/layout@portal:/home/cjayross/gatsby/packages/layout::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/layout@portal:/home/cjayross/gatsby/packages/layout::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/layout@npm:0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/layout@npm:0.7.1-1"
   dependencies:
     core-js: ^3.7.0
     dompurify: ^2.2.7
@@ -1550,12 +1552,13 @@ __metadata:
     "@gatsby-tv/utilities": "*"
     react: ^17.0.1
     react-dom: ^17.0.1
+  checksum: 14088f234e3edb96ba94cb40356dc458f305e24ff17498be2b89fb9bbcfbf7b7b1d7f3d0993270be55e4a982665b150ee591b16320eb0a6ea4a43862e21a7cc8
   languageName: node
-  linkType: soft
+  linkType: hard
 
-"@gatsby-tv/preview@portal:/home/cjayross/gatsby/packages/preview::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/preview@portal:/home/cjayross/gatsby/packages/preview::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/preview@npm:0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/preview@npm:0.7.1-1"
   dependencies:
     core-js: ^3.7.0
   peerDependencies:
@@ -1567,12 +1570,13 @@ __metadata:
     react-dom: ^17.0.1
     react-is: ^17.0.1
     react-router-dom: ^5.2.0
+  checksum: e0e2076f913a0af724c80c4412342b232412e5d06d5f6fe61022f47962b587bc6975592203762432989c9f5a67098e2cbd05c77d0baf0b10cd886757a3444faa
   languageName: node
-  linkType: soft
+  linkType: hard
 
-"@gatsby-tv/services@portal:/home/cjayross/gatsby/packages/services::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/services@portal:/home/cjayross/gatsby/packages/services::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/services@npm:0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/services@npm:0.7.1-1"
   dependencies:
     core-js: ^3.7.0
     dompurify: ^2.2.7
@@ -1582,8 +1586,9 @@ __metadata:
     react: ^17.0.1
     react-dom: ^17.0.1
     swr: ^0.5.3
+  checksum: 8f18581c04f06b2b03e6a47cb7a15ed0358c42fb17c2722878bb5abedbc2c6c38a9d3d73c0d9019b4b599d66858a5a542806cf6dfb633a9ae4124c654d377e3d
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@gatsby-tv/studio@workspace:.":
   version: 0.0.0-use.local
@@ -1604,14 +1609,14 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@babel/register": ^7.13.16
     "@babel/runtime": ^7.14.0
-    "@gatsby-tv/components": ^0.7.0
-    "@gatsby-tv/icons": ^0.7.0
-    "@gatsby-tv/layout": ^0.7.0
-    "@gatsby-tv/preview": ^0.7.0
-    "@gatsby-tv/services": ^0.7.0
-    "@gatsby-tv/styles": ^0.7.0
+    "@gatsby-tv/components": 0.7.1-1
+    "@gatsby-tv/icons": 0.7.1-1
+    "@gatsby-tv/layout": 0.7.1-1
+    "@gatsby-tv/preview": 0.7.1-1
+    "@gatsby-tv/services": 0.7.1-1
+    "@gatsby-tv/styles": ^0.7.1-0
     "@gatsby-tv/types": ^0.5.6
-    "@gatsby-tv/utilities": ^0.7.0
+    "@gatsby-tv/utilities": ^0.7.1-1
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.2
     "@types/express": ^4.17.13
     "@types/jsonwebtoken": ^8.5.4
@@ -1674,13 +1679,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gatsby-tv/styles@portal:/home/cjayross/gatsby/packages/styles::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/styles@portal:/home/cjayross/gatsby/packages/styles::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/styles@npm:^0.7.1-0":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/styles@npm:0.7.1-1"
   peerDependencies:
     sass: ^1.38.0
+  checksum: e8a10e263be0edee6e4a203f9a52a65d1c4e789fbf9f28f6d75993b03ffee1b780923001420e1451fc479ce6e686b07a181bc28da24521dab487a98b6823724e
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@gatsby-tv/types@npm:^0.5.6":
   version: 0.5.6
@@ -1691,9 +1697,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/utilities@portal:/home/cjayross/gatsby/packages/utilities::locator=%40gatsby-tv%2Fstudio%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@gatsby-tv/utilities@portal:/home/cjayross/gatsby/packages/utilities::locator=%40gatsby-tv%2Fstudio%40workspace%3A."
+"@gatsby-tv/utilities@npm:^0.7.1-1":
+  version: 0.7.1-1
+  resolution: "@gatsby-tv/utilities@npm:0.7.1-1"
   dependencies:
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^19.0.0
@@ -1718,8 +1724,9 @@ __metadata:
       optional: true
     ipfs:
       optional: true
+  checksum: 54444f6a7a1773c5e73d840a721e4c755f15ef4a60f529f2c85be6d2281461ab4ff73a0b24ae53b2b774a21269bd20dc17af234a53141793e767aa9adf5a0706
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@grpc/grpc-js@npm:^1.1.8":
   version: 1.4.4
