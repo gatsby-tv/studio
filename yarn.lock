@@ -1446,6 +1446,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@derhuerst/http-basic@npm:^8.2.0":
+  version: 8.2.1
+  resolution: "@derhuerst/http-basic@npm:8.2.1"
+  dependencies:
+    caseless: ^0.12.0
+    concat-stream: ^1.6.2
+    http-response-object: ^3.0.1
+    parse-cache-control: ^1.0.1
+  checksum: 35add0f13f0a549682b170139ab44648d39133f21c532305010836403fe3958e7c6138b524de158f0625b742334b7d17d52f8e4e3b7ae63626d0dc017e806e57
+  languageName: node
+  linkType: hard
+
 "@develar/schema-utils@npm:~2.6.5":
   version: 2.6.5
   resolution: "@develar/schema-utils@npm:2.6.5"
@@ -1505,7 +1517,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/components@npm:0.7.1-1":
+"@gatsby-tv/components@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/components@npm:0.7.1-1"
   dependencies:
@@ -1525,7 +1537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/icons@npm:0.7.1-1":
+"@gatsby-tv/icons@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/icons@npm:0.7.1-1"
   dependencies:
@@ -1536,7 +1548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/layout@npm:0.7.1-1":
+"@gatsby-tv/layout@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/layout@npm:0.7.1-1"
   dependencies:
@@ -1556,7 +1568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/preview@npm:0.7.1-1":
+"@gatsby-tv/preview@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/preview@npm:0.7.1-1"
   dependencies:
@@ -1574,7 +1586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/services@npm:0.7.1-1":
+"@gatsby-tv/services@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/services@npm:0.7.1-1"
   dependencies:
@@ -1609,16 +1621,17 @@ __metadata:
     "@babel/preset-typescript": ^7.13.0
     "@babel/register": ^7.13.16
     "@babel/runtime": ^7.14.0
-    "@gatsby-tv/components": 0.7.1-1
-    "@gatsby-tv/icons": 0.7.1-1
-    "@gatsby-tv/layout": 0.7.1-1
-    "@gatsby-tv/preview": 0.7.1-1
-    "@gatsby-tv/services": 0.7.1-1
+    "@gatsby-tv/components": ^0.7.1-0
+    "@gatsby-tv/icons": ^0.7.1-0
+    "@gatsby-tv/layout": ^0.7.1-0
+    "@gatsby-tv/preview": ^0.7.1-0
+    "@gatsby-tv/services": ^0.7.1-0
     "@gatsby-tv/styles": ^0.7.1-0
     "@gatsby-tv/types": ^0.5.6
-    "@gatsby-tv/utilities": ^0.7.1-1
+    "@gatsby-tv/utilities": ^0.7.1-0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.2
     "@types/express": ^4.17.13
+    "@types/ffmpeg-static": ^3.0.0
     "@types/jsonwebtoken": ^8.5.4
     "@types/node-ipc": ^9.1.5
     "@types/react": ^17.0.6
@@ -1645,6 +1658,7 @@ __metadata:
     electron-devtools-installer: ^3.2.0
     electron-rebuild: ^2.3.5
     express: ^4.17.1
+    ffmpeg-static: ^4.4.0
     file-loader: ^6.2.0
     http-proxy-middleware: ^2.0.1
     ipfs: ^0.54.4
@@ -1697,7 +1711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsby-tv/utilities@npm:^0.7.1-1":
+"@gatsby-tv/utilities@npm:^0.7.1-0":
   version: 0.7.1-1
   resolution: "@gatsby-tv/utilities@npm:0.7.1-1"
   dependencies:
@@ -2589,6 +2603,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/ffmpeg-static@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/ffmpeg-static@npm:3.0.0"
+  checksum: a5d50b3b2faa833c8eaea1b4224a3954fc49919704cb4b00cac8156cbbeb40f70638d8427436a76d7e50f520ae9bc190b568804b3b36f37eb12c0e2a8bcf8567
+  languageName: node
+  linkType: hard
+
 "@types/fs-extra@npm:^9.0.11":
   version: 9.0.13
   resolution: "@types/fs-extra@npm:9.0.13"
@@ -2697,6 +2718,13 @@ __metadata:
   version: 16.11.10
   resolution: "@types/node@npm:16.11.10"
   checksum: 9c79419c5c3d92d5825bffa30f3668533f598d8b63a73ea7fc24e47f162bdbed92b0f8e4f4261cc3314b39cee050e303366d2aa154abc95c63a572a110b8c160
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^10.0.3":
+  version: 10.17.60
+  resolution: "@types/node@npm:10.17.60"
+  checksum: 2cdb3a77d071ba8513e5e8306fa64bf50e3c3302390feeaeff1fd325dd25c8441369715dfc8e3701011a72fed5958c7dfa94eb9239a81b3c286caa4d97db6eef
   languageName: node
   linkType: hard
 
@@ -4379,7 +4407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caseless@npm:~0.12.0":
+"caseless@npm:^0.12.0, caseless@npm:~0.12.0":
   version: 0.12.0
   resolution: "caseless@npm:0.12.0"
   checksum: b43bd4c440aa1e8ee6baefee8063b4850fd0d7b378f6aabc796c9ec8cb26d27fb30b46885350777d9bd079c5256c0e1329ad0dc7c2817e0bb466810ebb353751
@@ -6674,6 +6702,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ffmpeg-static@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "ffmpeg-static@npm:4.4.0"
+  dependencies:
+    "@derhuerst/http-basic": ^8.2.0
+    env-paths: ^2.2.0
+    https-proxy-agent: ^5.0.0
+    progress: ^2.0.3
+  checksum: 1c7106d386ddc3b364991f76046418f4bde44f5fcef27d4d5651bfebd766c848e7773c3924476eeacbb27fa7980635226cf8983867897551aed619e3e26a8350
+  languageName: node
+  linkType: hard
+
 "file-loader@npm:^6.2.0":
   version: 6.2.0
   resolution: "file-loader@npm:6.2.0"
@@ -7749,6 +7789,15 @@ __metadata:
     follow-redirects: ^1.0.0
     requires-port: ^1.0.0
   checksum: f5bd96bf83e0b1e4226633dbb51f8b056c3e6321917df402deacec31dd7fe433914fc7a2c1831cf7ae21e69c90b3a669b8f434723e9e8b71fd68afe30737b6a5
+  languageName: node
+  linkType: hard
+
+"http-response-object@npm:^3.0.1":
+  version: 3.0.2
+  resolution: "http-response-object@npm:3.0.2"
+  dependencies:
+    "@types/node": ^10.0.3
+  checksum: 6cbdcb4ce7b27c9158a131b772c903ed54add2ba831e29cc165e91c3969fa6f8105ddf924aac5b954b534ad15a1ae697b693331b2be5281ee24d79aae20c3264
   languageName: node
   linkType: hard
 
@@ -12487,6 +12536,13 @@ __metadata:
   dependencies:
     callsites: ^3.0.0
   checksum: 6ba8b255145cae9470cf5551eb74be2d22281587af787a2626683a6c20fbb464978784661478dd2a3f1dad74d1e802d403e1b03c1a31fab310259eec8ac560ff
+  languageName: node
+  linkType: hard
+
+"parse-cache-control@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "parse-cache-control@npm:1.0.1"
+  checksum: 5a70868792124eb07c2dd07a78fcb824102e972e908254e9e59ce59a4796c51705ff28196d2b20d3b7353d14e9f98e65ed0e4eda9be072cc99b5297dc0466fee
   languageName: node
   linkType: hard
 
