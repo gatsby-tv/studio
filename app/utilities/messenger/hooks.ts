@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { ContextError } from '@gatsby-tv/utilities';
 
 import { ClientMessenger } from './messenger';
@@ -11,7 +11,7 @@ export function useMessengerContext(): MessengerContextType {
     throw new Error('Messenger context is not unique.');
   }
 
-  return new ClientMessenger();
+  return useMemo(() => new ClientMessenger(), []);
 }
 
 export function useMessenger(): MessengerContextType {
